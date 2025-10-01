@@ -28,13 +28,28 @@ function ui(cars) {
     const elDescription = clone.querySelector("p");
 
     elTitle.innerText = element.name;
+
     elDescription.innerText = `
-    Trim: ${element.trim}
-    Avlod: ${element.generation}
-    Yili: ${element.year}
-    Rangi: ${element.colorName} (${element.color})
-    Kategoriya: ${element.category}
-    `;
+Trim: ${element.trim}
+Avlod: ${element.generation}
+Yili: ${element.year}
+Rangi: ${element.colorName} (${element.color})
+Kategoriya: ${element.category}
+Eshik soni: ${element.doorCount}
+O‘rindiqlar soni: ${element.seatCount}
+Maksimal tezlik: ${element.maxSpeed}
+Tezlanish: ${element.acceleration}
+Dvigatel: ${element.engine}
+Ot kuchi: ${element.horsepower}
+Yoqilg‘i turi: ${element.fuelType}
+Yoqilg‘i sarfi:
+   - Shahar: ${element.fuelConsumption.city}
+   - Trassa: ${element.fuelConsumption.highway}
+   - O‘rtacha: ${element.fuelConsumption.combined}
+Mamlakat: ${element.country}
+Izoh: ${element.description}
+ID: ${element.id}
+`;
 
     elParent.appendChild(clone);
   });
